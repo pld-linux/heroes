@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/heroes/%{name}-%{version}.tar.bz2
 URL:		http://heroes.sourceforge.net/
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
+BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	gettext
 BuildRequires:	libggi-devel
@@ -39,6 +40,7 @@ tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub tools
 %configure
 %{__make}
 
