@@ -1,10 +1,6 @@
 %bcond_without	ggi	# without ggi support
 %bcond_without	sdl	# without sdl support
 
-%ifarch sparc ppc
-%undefine with_ggi
-%endif
-
 Summary:	Game like Nibbles but different
 Summary(pl):	Gra w stylu Nibbles, ale inna
 Name:		heroes
