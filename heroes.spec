@@ -2,22 +2,21 @@ Summary:	Game like Nibbles but different
 Summary(pl):	Gra w stylu Nibbles, ale inna
 Name:		heroes
 Version:	0.21
-Release:	1
+Release:	1.1
 License:	GPL
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/heroes/%{name}-%{version}.tar.bz2
 # Source0-md5:	ec608676e2e75abdfddf8072bb3b28db
-Source1:	http://dl.sourceforge.net/heroes/%{name}-data-1.1.tar.bz2
-# Source1-md5:	fdedbba9f0d914e8be821b89848f3e16
-Source2:	http://dl.sourceforge.net/heroes/%{name}-sound-tracks-1.0.tar.bz2
-# Source2-md5:	f23313177d7a33b1b2e8c759cfa54310
-Source3:	http://dl.sourceforge.net/heroes/%{name}-sound-effects-1.0.tar.bz2
-# Source3-md5:	1c04db6da3d98eebfb3119460701cd5b
 URL:		http://heroes.sourceforge.net/
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	bison
 BuildRequires:	gettext
+BuildRequires:	libggi-devel
+BuildRequires:	libgii-devel
+Requires:	%{name}-data
+Requires:	%{name}-sound-effects
+Requires:	%{name}-sound-tracks
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,44 +36,33 @@ tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
 "rozjed¼-pieszych".
 
 %prep
-%setup -q -a1 -a2 -a3
+%setup -q
 
 %build
 %configure
 %{__make}
 
-cd %{name}-data-1.1
-%configure
-%{__make}
-cd ..
-
-for i in sound-effects sound-tracks; do
-cd %{name}-$i-1.0
-%configure
-%{__make}
-cd ..
-done
-
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
-cd %{name}-data-1.1
-%makeinstall
-cd ..
-for i in sound-effects sound-tracks; do
-cd %{name}-$i-1.0
-%makeinstall
-cd ..
-done
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+
+%postun
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README THANKS TODO
-%{_datadir}/%{name}
-%{_mandir}/*/*
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man?/%{name}*
+%{_infodir}/%{name}*
+%{_datadir}/%{name}
