@@ -2,7 +2,7 @@ Summary:	Game like Nibbles but different
 Summary(pl):	Gra w stylu Nibbles, ale inna
 Name:		heroes
 Version:	0.12
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Games
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/heroes/%{name}-%{version}.tar.bz2
@@ -63,7 +63,7 @@ for i in sound-effects sound-tracks; do
 )
 done
 
-gzip -9nf CHANGES ChangeLog INSTALL NEWS README THANKS TODO
+gzip -9nf ChangeLog INSTALL NEWS README THANKS TODO
 
 %find_lang %{name}
 
@@ -72,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS* ChangeLog* INSTALL* NEWS* README* THANKS* TODO*
+%doc *.gz
 %{_datadir}/%{name}
 %{_mandir}/*/*
 %attr(755,root,root) %{_bindir}/*
