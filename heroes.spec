@@ -5,15 +5,15 @@ Version:	0.12
 Release:	5
 License:	GPL
 Group:		Applications/Games
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/heroes/%{name}-%{version}.tar.bz2
-Source1:	ftp://ftp.sourceforge.net/pub/sourceforge/heroes/%{name}-data-1.1.tar.bz2
-Source2:	ftp://ftp.sourceforge.net/pub/sourceforge/heroes/%{name}-sound-tracks-1.0.tar.bz2
-Source3:	ftp://ftp.sourceforge.net/pub/sourceforge/heroes/%{name}-sound-effects-1.0.tar.bz2
+Source0:	http://dl.sourceforge.net/heroes/%{name}-%{version}.tar.bz2
+Source1:	http://dl.sourceforge.net/heroes/%{name}-data-1.1.tar.bz2
+Source2:	http://dl.sourceforge.net/heroes/%{name}-sound-tracks-1.0.tar.bz2
+Source3:	http://dl.sourceforge.net/heroes/%{name}-sound-effects-1.0.tar.bz2
 URL:		http://heroes.sourceforge.net/
-BuildRequires:	gettext
-BuildRequires:	bison
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
+BuildRequires:	bison
+BuildRequires:	gettext
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
