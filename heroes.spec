@@ -5,10 +5,11 @@ Summary:	Game like Nibbles but different
 Summary(pl):	Gra w stylu Nibbles, ale inna
 Name:		heroes
 Version:	0.21
-Release:	1.2
+Release:	1.3
 License:	GPL
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/heroes/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-gkh.patch
 # Source0-md5:	ec608676e2e75abdfddf8072bb3b28db
 URL:		http://heroes.sourceforge.net/
 %if %{with sdl}
@@ -95,6 +96,7 @@ Pakiet zawiera wersjê ggi gry
 
 %prep
 %setup -q
+%patch0
 
 %build
 cp -f /usr/share/automake/config.sub tools
