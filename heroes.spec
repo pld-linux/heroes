@@ -1,8 +1,8 @@
 %bcond_without	ggi	# without ggi support
 %bcond_without	sdl	# without sdl support
 
-Summary:	Game like Nibbles but different
-Summary(pl):	Gra w stylu Nibbles, ale inna
+Summary:	Game like Nibbles
+Summary(pl):	Gra w stylu Nibbles
 Name:		heroes
 Version:	0.21
 Release:	2
