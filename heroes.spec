@@ -5,8 +5,6 @@ Version:	0.12
 Release:	3
 License:	GPL
 Group:		Applications/Games
-Group(de):	Applikationen/Spiele
-Group(pl):	Aplikacje/Gry
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/heroes/%{name}-%{version}.tar.bz2
 Source1:	ftp://ftp.sourceforge.net/pub/sourceforge/heroes/%{name}-data-1.1.tar.bz2
 Source2:	ftp://ftp.sourceforge.net/pub/sourceforge/heroes/%{name}-sound-tracks-1.0.tar.bz2
