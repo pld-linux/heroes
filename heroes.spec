@@ -63,8 +63,6 @@ for i in sound-effects sound-tracks; do
 )
 done
 
-gzip -9nf ChangeLog INSTALL NEWS README THANKS TODO
-
 %find_lang %{name}
 
 %clean
@@ -72,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog INSTALL NEWS README THANKS TODO
 %{_datadir}/%{name}
 %{_mandir}/*/*
 %attr(755,root,root) %{_bindir}/*
