@@ -1,3 +1,10 @@
+%bcond_without	ggi	# without ggi support
+%bcond_without	sdl	# without sdl support
+
+%ifarch sparc ppc
+%undefine with_ggi
+%endif
+
 Summary:	Game like Nibbles but different
 Summary(pl):	Gra w stylu Nibbles, ale inna
 Name:		heroes
@@ -8,14 +15,18 @@ Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/heroes/%{name}-%{version}.tar.bz2
 # Source0-md5:	ec608676e2e75abdfddf8072bb3b28db
 URL:		http://heroes.sourceforge.net/
+%if %{with sdl}
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
+%endif
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	gettext
+%if %{with ggi}
 BuildRequires:	libggi-devel
 BuildRequires:	libgii-devel
 BuildRequires:	libmikmod-devel
+%endif
 Requires:	%{name}-data
 Requires:	%{name}-engine
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -91,6 +102,7 @@ Pakiet zawiera wersjê ggi gry
 
 %build
 cp -f /usr/share/automake/config.sub tools
+%if %{with ggi}
 %configure \
 	--with-ggi \
 	--with-gii \
@@ -99,7 +111,9 @@ cp -f /usr/share/automake/config.sub tools
 	--without-sdl-mixer
 %{__make}
 mv src/heroes src/heroes-ggi
+%endif
 
+%if %{with sdl}
 %configure \
 	--without-ggi \
 	--without-gii \
@@ -107,6 +121,7 @@ mv src/heroes src/heroes-ggi
 	--with-sdl \
 	--with-sdl-mixer
 %{__make}
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -114,8 +129,13 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%if %{with ggi}
 install src/%{name}-ggi $RPM_BUILD_ROOT%{_bindir}/%{name}-ggi
+%endif
+
+%if %{with sdl}
 mv $RPM_BUILD_ROOT%{_bindir}/%{name}{,-sdl}
+%endif
 
 %find_lang %{name}
 
@@ -136,10 +156,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_infodir}/%{name}*
 %{_datadir}/%{name}
 
+%if %{with sdl}
 %files sdl
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}-sdl
+%endif
 
+%if %{with ggi}
 %files ggi
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}-ggi
+%endif
