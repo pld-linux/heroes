@@ -1,12 +1,12 @@
 Summary:	Game like Nibbles but different
 Summary(pl):	Gra w stylu Nibbles, ale inna
 Name:		heroes
-Version:	0.12
-Release:	5
+Version:	0.21
+Release:	1
 License:	GPL
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/heroes/%{name}-%{version}.tar.bz2
-# Source0-md5:	3aa24383e79ea7f1c60b954ee8985ead
+# Source0-md5:	ec608676e2e75abdfddf8072bb3b28db
 Source1:	http://dl.sourceforge.net/heroes/%{name}-data-1.1.tar.bz2
 # Source1-md5:	fdedbba9f0d914e8be821b89848f3e16
 Source2:	http://dl.sourceforge.net/heroes/%{name}-sound-tracks-1.0.tar.bz2
