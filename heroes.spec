@@ -16,8 +16,6 @@ BuildRequires:	gettext
 BuildRequires:	libggi-devel
 BuildRequires:	libgii-devel
 Requires:	%{name}-data
-Requires:	%{name}-sound-effects
-Requires:	%{name}-sound-tracks
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
