@@ -1,0 +1,13 @@
+--- src/bytesex.h~	2001-09-21 12:43:54.000000000 +0200
++++ src/bytesex.h	2004-01-29 21:41:01.000000000 +0100
+@@ -28,8 +28,8 @@
+ #ifdef linux
+ 
+ #include <asm/byteorder.h>
+-#define BSWAP16(x) __arch__swab16(x)
+-#define BSWAP32(x) __arch__swab32(x)
++#define BSWAP16(x) bswap_16(x)
++#define BSWAP32(x) bswap_32(x)
+ 
+ #else /* ! linux */
+ 
