@@ -42,7 +42,7 @@ tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
 (cd %{name}-data-1.1
 %configure
 %{__make}
-)       
+)
 
 for i in sound-effects sound-tracks; do
 (cd %{name}-$i-1.0
