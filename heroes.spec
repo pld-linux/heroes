@@ -39,28 +39,28 @@ tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
 %configure
 %{__make}
 
-(cd %{name}-data-1.1
+cd %{name}-data-1.1
 %configure
 %{__make}
-)
+cd ..
 
 for i in sound-effects sound-tracks; do
-(cd %{name}-$i-1.0
+cd %{name}-$i-1.0
 %configure
 %{__make}
-)
+cd ..
 done
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
-(cd %{name}-data-1.1
+cd %{name}-data-1.1
 %makeinstall
-)
+cd ..
 for i in sound-effects sound-tracks; do
-(cd %{name}-$i-1.0
+cd %{name}-$i-1.0
 %makeinstall
-)
+cd ..
 done
 
 %find_lang %{name}
