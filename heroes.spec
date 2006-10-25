@@ -48,7 +48,7 @@ tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
 Summary:	Game like Nibbles but different - SDL engine
 Summary(pl):	Gra w stylu Nibbles, ale inna - wersja SDL
 Group:		Applications/Games
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-engine
 
 %description sdl
@@ -57,8 +57,8 @@ includes many graphical improvements and new game features. In it, you
 must maneuver a small vehicle around a world and collect powerups
 while avoiding obstacles, your opponents' trails, and even your own
 trail. Several modes of play are available, including
-"get-all-the-bonuses", deathmatch, and "squish-the-pedestrians".
-This package containts SDL engine.
+"get-all-the-bonuses", deathmatch, and "squish-the-pedestrians". This
+package containts SDL engine.
 
 %description sdl -l pl
 Heroes jest podobny do starych gier "Tron" i "Nibbles", ale zawiera
@@ -66,14 +66,13 @@ wiele graficznych ulepszeñ i nowe w³asno¶ci. W tej grze musisz
 manewrowaæ ma³ym pojazdem i zbieraæ dopalacze, unikaj±c przeszkód i
 ¶ladów przeciwników, a nawet swojego w³asnego ¶ladu. S± dostêpne ró¿ne
 tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
-"rozjed¼-pieszych".
-Pakiet zawiera wersjê SDL gry.
+"rozjed¼-pieszych". Pakiet zawiera wersjê SDL gry.
 
 %package ggi
 Summary:	Game like Nibbles but different - GGI engine
 Summary(pl):	Gra w stylu Nibbles, ale inna - wersja GGI
 Group:		Applications/Games
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-engine
 
 %description ggi
@@ -82,8 +81,8 @@ includes many graphical improvements and new game features. In it, you
 must maneuver a small vehicle around a world and collect powerups
 while avoiding obstacles, your opponents' trails, and even your own
 trail. Several modes of play are available, including
-"get-all-the-bonuses", deathmatch, and "squish-the-pedestrians".
-This package containts GGI engine.
+"get-all-the-bonuses", deathmatch, and "squish-the-pedestrians". This
+package containts GGI engine.
 
 %description ggi -l pl
 Heroes jest podobny do starych gier "Tron" i "Nibbles", ale zawiera
@@ -91,8 +90,7 @@ wiele graficznych ulepszeñ i nowe w³asno¶ci. W tej grze musisz
 manewrowaæ ma³ym pojazdem i zbieraæ dopalacze, unikaj±c przeszkód i
 ¶ladów przeciwników, a nawet swojego w³asnego ¶ladu. S± dostêpne ró¿ne
 tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
-"rozjed¼-pieszych".
-Pakiet zawiera wersjê ggi gry
+"rozjed¼-pieszych". Pakiet zawiera wersjê ggi gry
 
 %prep
 %setup -q
