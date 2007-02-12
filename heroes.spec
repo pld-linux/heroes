@@ -2,7 +2,7 @@
 %bcond_without	sdl	# without sdl support
 
 Summary:	Game like Nibbles
-Summary(pl):	Gra w stylu Nibbles
+Summary(pl.UTF-8):   Gra w stylu Nibbles
 Name:		heroes
 Version:	0.21
 Release:	2
@@ -36,17 +36,17 @@ while avoiding obstacles, your opponents' trails, and even your own
 trail. Several modes of play are available, including
 "get-all-the-bonuses", deathmatch, and "squish-the-pedestrians".
 
-%description -l pl
+%description -l pl.UTF-8
 Heroes jest podobny do starych gier "Tron" i "Nibbles", ale zawiera
-wiele graficznych ulepszeñ i nowe w³asno¶ci. W tej grze musisz
-manewrowaæ ma³ym pojazdem i zbieraæ dopalacze, unikaj±c przeszkód i
-¶ladów przeciwników, a nawet swojego w³asnego ¶ladu. S± dostêpne ró¿ne
+wiele graficznych ulepszeÅ„ i nowe wÅ‚asnoÅ›ci. W tej grze musisz
+manewrowaÄ‡ maÅ‚ym pojazdem i zbieraÄ‡ dopalacze, unikajÄ…c przeszkÃ³d i
+Å›ladÃ³w przeciwnikÃ³w, a nawet swojego wÅ‚asnego Å›ladu. SÄ… dostÄ™pne rÃ³Å¼ne
 tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
-"rozjed¼-pieszych".
+"rozjedÅº-pieszych".
 
 %package sdl
 Summary:	Game like Nibbles but different - SDL engine
-Summary(pl):	Gra w stylu Nibbles, ale inna - wersja SDL
+Summary(pl.UTF-8):   Gra w stylu Nibbles, ale inna - wersja SDL
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-engine
@@ -60,17 +60,17 @@ trail. Several modes of play are available, including
 "get-all-the-bonuses", deathmatch, and "squish-the-pedestrians". This
 package containts SDL engine.
 
-%description sdl -l pl
+%description sdl -l pl.UTF-8
 Heroes jest podobny do starych gier "Tron" i "Nibbles", ale zawiera
-wiele graficznych ulepszeñ i nowe w³asno¶ci. W tej grze musisz
-manewrowaæ ma³ym pojazdem i zbieraæ dopalacze, unikaj±c przeszkód i
-¶ladów przeciwników, a nawet swojego w³asnego ¶ladu. S± dostêpne ró¿ne
+wiele graficznych ulepszeÅ„ i nowe wÅ‚asnoÅ›ci. W tej grze musisz
+manewrowaÄ‡ maÅ‚ym pojazdem i zbieraÄ‡ dopalacze, unikajÄ…c przeszkÃ³d i
+Å›ladÃ³w przeciwnikÃ³w, a nawet swojego wÅ‚asnego Å›ladu. SÄ… dostÄ™pne rÃ³Å¼ne
 tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
-"rozjed¼-pieszych". Pakiet zawiera wersjê SDL gry.
+"rozjedÅº-pieszych". Pakiet zawiera wersjÄ™ SDL gry.
 
 %package ggi
 Summary:	Game like Nibbles but different - GGI engine
-Summary(pl):	Gra w stylu Nibbles, ale inna - wersja GGI
+Summary(pl.UTF-8):   Gra w stylu Nibbles, ale inna - wersja GGI
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-engine
@@ -84,13 +84,13 @@ trail. Several modes of play are available, including
 "get-all-the-bonuses", deathmatch, and "squish-the-pedestrians". This
 package containts GGI engine.
 
-%description ggi -l pl
+%description ggi -l pl.UTF-8
 Heroes jest podobny do starych gier "Tron" i "Nibbles", ale zawiera
-wiele graficznych ulepszeñ i nowe w³asno¶ci. W tej grze musisz
-manewrowaæ ma³ym pojazdem i zbieraæ dopalacze, unikaj±c przeszkód i
-¶ladów przeciwników, a nawet swojego w³asnego ¶ladu. S± dostêpne ró¿ne
+wiele graficznych ulepszeÅ„ i nowe wÅ‚asnoÅ›ci. W tej grze musisz
+manewrowaÄ‡ maÅ‚ym pojazdem i zbieraÄ‡ dopalacze, unikajÄ…c przeszkÃ³d i
+Å›ladÃ³w przeciwnikÃ³w, a nawet swojego wÅ‚asnego Å›ladu. SÄ… dostÄ™pne rÃ³Å¼ne
 tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
-"rozjed¼-pieszych". Pakiet zawiera wersjê ggi gry
+"rozjedÅº-pieszych". Pakiet zawiera wersjÄ™ ggi gry
 
 %prep
 %setup -q
