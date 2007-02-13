@@ -2,7 +2,7 @@
 %bcond_without	sdl	# without sdl support
 
 Summary:	Game like Nibbles
-Summary(pl.UTF-8):   Gra w stylu Nibbles
+Summary(pl.UTF-8):	Gra w stylu Nibbles
 Name:		heroes
 Version:	0.21
 Release:	2
@@ -46,7 +46,7 @@ tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
 
 %package sdl
 Summary:	Game like Nibbles but different - SDL engine
-Summary(pl.UTF-8):   Gra w stylu Nibbles, ale inna - wersja SDL
+Summary(pl.UTF-8):	Gra w stylu Nibbles, ale inna - wersja SDL
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-engine
@@ -70,7 +70,7 @@ tryby gry, w tym "zbierz-wszystkie-premie", deathmatch oraz
 
 %package ggi
 Summary:	Game like Nibbles but different - GGI engine
-Summary(pl.UTF-8):   Gra w stylu Nibbles, ale inna - wersja GGI
+Summary(pl.UTF-8):	Gra w stylu Nibbles, ale inna - wersja GGI
 Group:		Applications/Games
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-engine
